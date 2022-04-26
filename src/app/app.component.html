@@ -1,0 +1,47 @@
+<!-- Navigation-->
+
+<!-- Masthead-->
+<header class="masthead bg-primary text-white text-center">
+  <div *ngIf="!loaded">
+    <div class="spinner-border text-light text-center mx-1" style="width: 10rem; height: 10rem;">
+    </div>
+  </div>
+  <div *ngIf="loaded" class="container d-flex align-items-center flex-column">
+    <!-- Masthead Avatar Image-->
+    <img class="masthead-avatar mb-5" src="../assets/img/{{user.Gender}}.svg" alt="..." />
+    <!-- Masthead Heading-->
+    <h1 class="masthead-heading text-uppercase mb-0">{{user.Name}}</h1>
+    <!-- Icon Divider-->
+    <div class="divider-custom divider-light">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+      <div class="divider-custom-line"></div> 
+    </div>
+    <!-- Masthead Subheading-->
+    
+    <div class="col-lg-4 mb-5 mb-lg-0">
+      <h4 class="text-uppercase mb-4">{{user.Description}}</h4>
+      
+
+      
+
+    <div>
+      <a *ngIf="user.phoneNo != undefined" class="btn btn-outline-light btn-social mx-1" href="tel:{{user.phoneNo}}">
+        <i class="fas fa-phone-alt"></i></a>
+      <a *ngIf="user.Email != undefined" class="btn btn-lg btn-outline-light btn-social mx-1"
+        href="mailto:{{user.Email}}"><i class="far fa-envelope"></i></a>
+      <a *ngIf="user.phoneNo != undefined" class="btn btn-outline-light btn-social mx-1" href="https://api.whatsapp.com/send/?phone={{user.phoneNo.substring(2)}}"><i
+        class="fab fa-fw fa-whatsapp"></i></a>
+      <a *ngIf="user.instaUsername != undefined" class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/{{user.instaUsername}}"><i
+        class="fab fa-fw fa-instagram"></i></a>
+      <a *ngIf="user.snapUsername != undefined" class="btn btn-outline-light btn-social mx-1" href="https://www.snapchat.com/add/{{user.snapUsername}}"><i
+        class="fab fa-fw fa-snapchat"></i></a>
+      <a *ngIf="user.twUsername != undefined" class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/{{user.twUsername}}"><i
+          class="fab fa-fw fa-twitter"></i></a>
+      <a *ngIf="user.lkdinUsername != undefined" class="btn btn-lg btn-outline-light btn-social mx-1"
+        href="https://www.linkedin.com/in/{{user.lkdinUsername}}"><i class="fab fa-fw fa-linkedin-in"></i></a>
+    </div>
+  </div>
+  </div><br>
+</header>
+<!-- Portfolio Section-->
